@@ -13,9 +13,9 @@ const string GOOD_MSG = "Good";
 const string BAD_MSG = " Not Good";
 
 int type1(){
-    //cout은 출력함수 (C언어에서의 Printf)
+    //cout은 출력함수
     cout << "Enter your Score: ";
-    //cin은 입력함수 (C언어에서의 scanf)
+    //cin은 입력함수 (C언어에서의 scanf) ->int형 값을 키보드로부터 입력 받는다.
     int score;
     cin >> score; //변수 score의 type이 int이므로 사용자로 부터 int를 입력받는다.
 
@@ -49,6 +49,7 @@ int type2(){
     char signChar;
 
     if (zeroOrMore){
+        //zeroOrMore가 0보다 크거 같을 때
         product = integerNumber * positiveNumber;
         signChar = '+';
     }
@@ -60,12 +61,20 @@ int type2(){
 
 }
 
+int bit_operaton(){
+    //2's complements -> 1's complements + 1
+    //1's complements -> ~ num
+    int num = 128;
+    int result = num + (~num + 1);
+    cout << result << endl;
+}
+
 int type3(){
     //byte수를 명시하여 정수 사용 <cstdint>
-    int8_t signed_int8; //signed 8비트 정수
+    int8_t signed_int8; //signed 8비트 (1바이트)정수
     uint8_t usigned_int8; //unsigned 8비트 정수
 
-    //sizeof 함수를 이용해 변수의 size 알아내기
+    //sizeof() 함수를 이용해 변수의 size 알아내기
     cout << sizeof(signed_int8) <<"byte = " << 8 * sizeof (signed_int8) << "bit" << endl;
 
     //is_same을 이용해 타입을 비교하기 is_same<type, type>::value
@@ -89,7 +98,9 @@ int type3(){
 
     cout << "decimal : " << decimal << " octal : " << octal << " hexa : " << hexa << endl;
 
-    float real_number = 1.23f; // 실수 뒤에 f/F 붙여 float type임을 명시
+    //double과 float 모두 실수 표현 ( double : 8byte , float : 4byte )
+    double real_number_double = 1.23;
+    float real_number_float = 1.23f; // 실수 뒤에 f/F 붙여 float type임을 명시
 
     //special character
     cout << "Backslash : " << " \\ " << "\n" ; //두 개의 Backslash(\\) 한개의 Backslash (\)출력 가능 , "\n"을 이용해 줄 바꾸기
@@ -99,8 +110,8 @@ int type3(){
 }
 
 //상수는 선언과 동시에 초기화가 이루어져야하며, 그 값은 변경 불가능하다.(새로운 값 대입 허용되지 않음)
-
 int circle(){
+
     const float PI = 3.14;
 
     float radius;
@@ -108,17 +119,29 @@ int circle(){
 
     float area = radius * radius * PI;
     cout << "radius : " << radius << " area : " << area << endl;
+
 }
 
 int type_cast() {
+
     //형 변환 : 크기가 큰 type을 작은 type으로 변경시 자료 손실의 가능성이 발생
     //implicit -> 자료 손실 가능성이 있는 경우 컴파일러가 경고
+    float float_int = 100; // 변수 float_int의 타입은 floaot(4byte) 이지만, 리터럴로 정수(4byte)인 100이 주어짐. -> 묵시적방법
+    short int short_int = 100000;
+    cout << float_int << short_int << endl;
 
-    //explicit : static_cast<type>을 이용하여 명시적으로 형 변환
+    //explicit : static_cast<type>을 이용하여 명시적으로 형변환 : 컴파일러가 경고를 안해줌
+    int n1 = 10, n2 = 20;
+    float divide = static_cast<float> (n1)/n2;
+    cout << n1 << " / " << n2 <<" = "<< divide <<'\n';
+
 }
 
 int brace(){
 
+    //brace initialization -> 잘못된 형변환이 이루어졌을 떄 컴파일러가 바로 잡아냄
+    // '='없이 { } 안에 리터럴을 넣어 해당 변수 초기화
+    // '='없이 { } 안에 리터럴을 넣어 해당 변수 초기화
     // 초기값으로 0이 할당된다. {}안에 숫자를 넣어 초기화 가능
     int brace_integer {};
     int brace_initialized_integer {5};
@@ -126,7 +149,7 @@ int brace(){
 
 
     //brace를 이용해 배열을 초기화 할 수 있다. index를 활용해 접근 가능
-    int intArray[] = {1,2,3,4,5,};
+    int intArray[] {1,2,3,4,5,};
 
     for (int i = 0; i < sizeof(intArray)/sizeof(int); i ++){
         cout << intArray[i];
@@ -144,6 +167,9 @@ void print(int v){
     cout << "\n" << v << " " << globalvariable << endl;
 }
 
+//전역 변수 : 프로그램 데이터 공간에 메모리 할당
+//지역 변수 : 프로그램 스택에 메모리 할당
+
 int global_local(){
     //함수 global_local의 지역변수 local_1 : 함수 global_local 밖에서는 접근 불가능
     int local_1;
@@ -159,15 +185,18 @@ int global_local(){
     //local_1인 10이 parameter로 넘겨짐
 }
 
+//전역 변수인 경우 어떠한 초기화를 하지 않아도 기본적으로 정의되어있는 값으로 초기화됨  : 지역변수는 값이 자동으로 초기화 되지 않는다.
+//int,bool,float "지역변수" 를 초기화 하지 않으면 초기값으로 0 (0, false, 0.0f) 을 가진다
 
 int default_integer;
 bool default_boolean;
 float default_float;
 
 int not_initialized_gloabal_variable(){
-    //int,bool,float 변수를 초기화 하지 않으면 초기값으로 0 (0, false, 0.0f) 을 가진다
+
     cout << "not_initialized_gloabal_variable" << "\n";
     cout << default_integer << " " << default_boolean << " " << default_float << endl;
+
 }
 
 int print_static(int v){
@@ -194,6 +223,8 @@ int hiding_variable = -100;
 int hiding(){
 
     //전역변수와 지역변수의 변수명이 같은 경우 -> 전역변수를 가림
+    //블럭안의 가장 가까운 변수를 가져옴
+
     int hiding_variable = 100;
     cout << hiding_variable << "\n"; //지역변수가 출력됨
 
