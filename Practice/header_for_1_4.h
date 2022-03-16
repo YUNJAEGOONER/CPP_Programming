@@ -1,0 +1,4 @@
+#ifndef INC_20220314_POINTER_HEADER_FOR_1_4_H
+#define INC_20220314_POINTER_HEADER_FOR_1_4_H
+void update(int* a, int* b);
+#endif //INC_20220314_POINTER_HEADER_FOR_1_4_H
