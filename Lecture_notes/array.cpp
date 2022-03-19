@@ -136,8 +136,103 @@ int two_dimensional_array(){
 
     for (int i = 0 ; i < ROW_SIZE ; i ++ ){
         for (int j = 0 ; j < COLUMN_SIZE ; j ++ ){
-            *(*(ArrayB + (i * ROW_SIZE))+j) = i * j;
+            (*(*(ArrayB + i)+j)) = i * j;
         }
     }
+
+    cout <<'\n';
+    for (int i = 0 ; i != ROW_SIZE; ++i){
+        for (int j = 0 ; j != COLUMN_SIZE ; ++j){
+            cout << *(*(ArrayB+ i) + j) << '\t';
+        }
+        cout << endl;
+    }
+
+    cout << '\n' << "Sum of matrix A and B" << endl;
+
+    for (int i = 0; i < ROW_SIZE ; i ++){
+        for (int j = 0 ; j < COLUMN_SIZE ; j++){
+            int a = ArrayA[i][j];
+            int b = *(*(ArrayB + i) + j );
+            cout << a << " + " << b << " = " << a+b << '\t';
+        }
+        cout << '\n';
+    }
+}
+
+int array_2d_poitner(){
+
+    //row size 입력받기
+    cout << '\n' << "size of row : " ;
+    int row;
+    cin >> row;
+
+    //column size 입력받기
+    cout << "size of column : ";
+    int column;
+    cin >> column;
+
+    //Matrix A
+    int MatrixA[row][column];
+    for (int i = 0; i < row ; i ++){
+        for (int j = 0 ; j < column ; j ++){
+            MatrixA[i][j] = i + j;
+        }
+    }
+
+    cout << "Matrix A" << endl;
+    for (int i = 0 ; i < row ; i ++ ){
+        for (int j = 0 ; j < column ; j ++){
+            cout << MatrixA[i][j] << '\t';
+        }
+        cout << endl;
+    }
+
+    //MatrixB
+
+    int ** MatrixB = new int*[row];
+
+    for (int i = 0; i != row ; ++i){
+        MatrixB[i] = new int[column];
+        //int * array = new int [row];
+        for (int j = 0; j != column ; j ++){
+            MatrixB[i][j] = i * j;
+            //array[j] = i * j;
+        }
+        //MatrixB[i] = array;
+    }
+
+    cout << "MatrixB" << endl;
+    for (int i = 0 ; i != row ; ++i){
+        for (int j = 0  ; j != column ; ++j ){
+            cout << *(*(MatrixB +i)+j) << '\t';
+        }
+        cout << endl;
+    }
+
+    // new를 통해 메모리를 할당했다면, delete를 통해 할당 받은 메모리 해제
+    for (int i = 0 ; i < row ; i ++ ){
+        delete [] MatrixB[i];
+    }
+    delete [] MatrixB;
+}
+
+//메모리 할당
+int memory_new(){
+    int number_of_integer = 5;
+
+    // new type [저장하고 싶은 type의 개수]
+    // 정수형 배열 Array는 5개의 정수를 저장 할 수 있다.
+    int * Array = new int[number_of_integer];
+
+    for (int i = 0; i != number_of_integer ; ++ i){
+        Array[i] = i * 100;  // index로 접근 가능
+    }
+
+    cout << "Array" << endl;
+    for(int i = 0 ; i < number_of_integer; i ++ ){
+        cout << *(Array + i) << '\t';
+    }
+    delete [] Array; //new를 통해 할당 받은 메모리는 delete를 이용해 메모리 할당 해제를 해준다.
 }
 
