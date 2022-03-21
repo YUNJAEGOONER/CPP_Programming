@@ -8,7 +8,7 @@
 
 ![for-while-result](https://user-images.githubusercontent.com/50546745/157867578-66718cdf-a2d5-4733-b6d4-869a7c934d62.png)
 
-**-- ++ 를 활용한 while**
+### -- / ++ 를 활용한 while
 
 ![while_plus](https://user-images.githubusercontent.com/50546745/159238344-6ae8611e-8cfa-46fd-87b4-53c55219bea6.png)
 
