@@ -18,3 +18,9 @@
 ![new_delete](https://user-images.githubusercontent.com/50546745/159124413-14abb8a5-a5b2-4356-ae60-d2d12a202f56.png)
 
 ![resrult_new](https://user-images.githubusercontent.com/50546745/159124327-afac0d18-0eb5-431d-9c03-000d33c37189.png)
+
+## 2dimension Array / Vector
+
+![2d_array](https://user-images.githubusercontent.com/50546745/159659388-1daf2686-a524-483a-ad27-29b62331df7b.png)
+
+![2d_vector](https://user-images.githubusercontent.com/50546745/159659392-545acad1-6178-4658-bd02-90cd57f214ed.png)
