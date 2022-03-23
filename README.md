@@ -21,6 +21,8 @@
 
 ## 2dimension Array / Vector
 
+인덱스 접근을 위해서는 size를 꼭 지정해 주자
+
 ![2d_array](https://user-images.githubusercontent.com/50546745/159659388-1daf2686-a524-483a-ad27-29b62331df7b.png)
 
 ![2d_vector](https://user-images.githubusercontent.com/50546745/159659392-545acad1-6178-4658-bd02-90cd57f214ed.png)
