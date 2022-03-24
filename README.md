@@ -26,3 +26,12 @@
 ![2d_array](https://user-images.githubusercontent.com/50546745/159659388-1daf2686-a524-483a-ad27-29b62331df7b.png)
 
 ![2d_vector](https://user-images.githubusercontent.com/50546745/159659392-545acad1-6178-4658-bd02-90cd57f214ed.png)
+
+## Iterator & Range-based-for-loop
+
+![iterator_ranged](https://user-images.githubusercontent.com/50546745/159933879-e2cff351-c17a-4d96-a7b3-2dea4d79025c.png)
+
+![itr_result](https://user-images.githubusercontent.com/50546745/159933893-414ca86c-84ce-4b5d-a67f-896b8e2843c9.png)
+
+
+
