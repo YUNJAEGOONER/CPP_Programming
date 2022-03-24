@@ -29,7 +29,7 @@
 
 ## Iterator & Range-based-for-loop
 
-![iterator_ranged](https://user-images.githubusercontent.com/50546745/159933879-e2cff351-c17a-4d96-a7b3-2dea4d79025c.png)
+![iterator_ranged](https://user-images.githubusercontent.com/50546745/159934509-430fd49d-08c6-44a4-8bb6-1c4831606864.png)
 
 ![itr_result](https://user-images.githubusercontent.com/50546745/159933893-414ca86c-84ce-4b5d-a67f-896b8e2843c9.png)
 
