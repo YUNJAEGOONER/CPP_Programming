@@ -35,6 +35,6 @@
 
 ## Conditional expression
 
-![conditional expression](https://user-images.githubusercontent.com/50546745/160116198-a4c7dbcd-acbf-454c-af4a-aedc48b5d37b.png)
+![conditional expression](https://user-images.githubusercontent.com/50546745/160116415-cfc0a550-9ed3-42d2-b12f-34119f65bd6c.png)
 
 ![conditional expression_result](https://user-images.githubusercontent.com/50546745/160116194-8daa8be4-4a05-44eb-9fee-9ba793760231.png)
