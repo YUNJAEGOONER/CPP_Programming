@@ -33,6 +33,10 @@
 
 ![itr_result](https://user-images.githubusercontent.com/50546745/159933893-414ca86c-84ce-4b5d-a67f-896b8e2843c9.png)
 
+![ranged_for_](https://user-images.githubusercontent.com/50546745/160309899-724403be-329c-4859-a127-27866647acb4.png)
+
+![ranged_for_result](https://user-images.githubusercontent.com/50546745/160309901-d9e41afe-9220-42a7-8eb1-9acd3d02a3fe.png)
+
 ## Conditional expression
 
 ![conditional expression](https://user-images.githubusercontent.com/50546745/160116415-cfc0a550-9ed3-42d2-b12f-34119f65bd6c.png)
